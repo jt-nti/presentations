@@ -1,0 +1,30 @@
+baseURL: https://jt-nti.github.io/presentations/
+languageCode: en-us
+title: Presentations
+
+# relativeURLs: true
+# uglyURLs: true
+
+theme:
+- hugo-flex
+- github.com/dzello/reveal-hugo
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputFormats:
+  Reveal:
+    baseName: index
+    mediaType: text/html
+    isHTML: true
+
+params:
+  footer:
+
+menu:
+  main:
+    - name: About
+      pageRef: /about
+      weight: 1
