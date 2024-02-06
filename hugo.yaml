@@ -13,6 +13,10 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    codeFences: true
+    noClasses: true
+    style: rrt
 
 outputFormats:
   Reveal:

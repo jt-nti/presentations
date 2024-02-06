@@ -2,4 +2,4 @@
 title: Assorted presentations
 ---
 
-There might be some presentations here one day but these are only placeholders for now.
+There might be more presentations here one day but for now there is only one.
