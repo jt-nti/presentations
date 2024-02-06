@@ -35,7 +35,6 @@ It's commits all the way down...
 ```mermaid
 %%{
     init: {
-        'logLevel': 'debug',
         'themeVariables': {
             'git0': '#ffffff',
             'commitLabelColor': '#ffffff',
@@ -59,17 +58,17 @@ gitGraph TB:
 And branches...
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "16px"
-  gitGraph:
-    showCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000'
+        },
+        'gitGraph': {
+            'showCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
     commit id: "C1"
     commit id: "C2"
@@ -99,19 +98,18 @@ gitGraph TB:
 And a HEAD...
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv1: "#dede00"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    tagLabelFontSize: "16px"
-  gitGraph:
-    showBranches: false
-    showCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitInv1': '#dede00'
+        },
+        'gitGraph': {
+            'showBranches': false,
+            'showCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
     commit id: "C1"
     commit id: "C2"
@@ -141,19 +139,18 @@ gitGraph TB:
 (Which can become detached!)
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv1: "#dede00"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    tagLabelFontSize: "16px"
-  gitGraph:
-    showBranches: false
-    showCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitInv1': '#dede00'
+        },
+        'gitGraph': {
+            'showBranches': false,
+            'showCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
     commit id: "C1"
     commit id: "C2"
@@ -183,18 +180,20 @@ gitGraph TB:
 You can also tag things...
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    tagLabelColor: "#ffffff"
-    tagLabelBackground: "#000000"
-    tagLabelFontSize: "16px"
-  gitGraph:
-    showBranches: false
-    showCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'tagLabelColor': '#ffffff',
+            'tagLabelBackground': '#000000',
+            'tagLabelFontSize': '16px'
+        },
+        'gitGraph': {
+            'showBranches': false,
+            'showCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
     commit id: "C1"
     commit id: "C2"
@@ -236,18 +235,21 @@ Those bugs aren't going to write themselves...
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv0: "#ffffff"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv0': '#ffffff',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "ac0d89c Initial commit"
    commit id: "0e2bac0 Add code"
@@ -266,18 +268,21 @@ $ _
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv0: "#dede00"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv0': '#dede00',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "ac0d89c Initial commit"
    commit id: "0e2bac0 Add code"
@@ -296,18 +301,21 @@ console.log("Unexpected pineapple");
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv0: "#dede00"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv0': '#dede00',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "ac0d89c Initial commit"
    commit id: "0e2bac0 Add code"
@@ -331,18 +339,21 @@ $ _
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv1: "#dede00"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv1': '#dede00',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "0e2bac0 Add code"
    commit id: "03b29cf Add moar code"
@@ -369,18 +380,21 @@ Time passes...
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv0: "#ffffff"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv0': '#ffffff',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "03b29cf Add moar code"
    commit id: "fa54742 Nick made me add tests!"
@@ -405,18 +419,21 @@ $ _
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv0: "#ffffff"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv0': '#ffffff',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "fa54742 Nick made me add tests!"
    branch pineapple
@@ -501,18 +518,21 @@ Share all the bugs...
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv1: "#dede00"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv1': '#dede00',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "fa54742 Nick made me add tests!"
    branch pineapple
@@ -535,18 +555,21 @@ $ _
 ---
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    gitBranchLabel0: "#000000"
-    gitInv1: "#dede00"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
----
+%%{
+    init: {
+        'themeVariables': {
+            'git0': '#ffffff',
+            'gitBranchLabel0': '#000000',
+            'gitInv1': '#dede00',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "fa54742 Nick made me add tests!"
    commit id: "733138e Fix tests!"
