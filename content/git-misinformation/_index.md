@@ -33,17 +33,21 @@ You've already set everything up, e.g.
 It's commits all the way down...
 
 ```mermaid
----
-config:
-  themeVariables:
-    git0: "#ffffff"
-    commitLabelColor: "#ffffff"
-    commitLabelBackground: "#000000"
-    commitLabelFontSize: "24px"
-  gitGraph:
-    rotateCommitLabel: false
-    showBranches: false
----
+%%{
+    init: {
+        'logLevel': 'debug',
+        'themeVariables': {
+            'git0': '#ffffff',
+            'commitLabelColor': '#ffffff',
+            'commitLabelBackground': '#000000',
+            'commitLabelFontSize': '24px'
+        },
+        'gitGraph': {
+            'rotateCommitLabel': false,
+            'showBranches': false
+        }
+    }
+}%%
 gitGraph TB:
    commit id: "C1"
    commit id: "C2"
